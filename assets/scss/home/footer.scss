@@ -1,0 +1,58 @@
+@import '../variables';
+@import '../mixins';
+
+.footer{
+    background: $clr-dark;
+        &__header {
+            background:linear-gradient(4deg, rgba($color:$clr-dark, $alpha: .45),rgba($color:$clr-dark, $alpha: .45)), url(../images/footer-bg.png) no-repeat center/cover;
+            min-height: 429px;
+        }
+        &__content-wrapper {
+            padding-block:80px;
+            @include mq(md) {
+                padding-block:80px 20px;
+            }
+               
+        }
+        h5 {
+            color: $clr-white;
+            margin-bottom: 30px;
+            font-size: 17px;
+            line-height: 26px;
+            font-weight: 500;
+        }
+        &__list {
+            padding-left: 0;
+            display: flex;
+            gap: 30px;
+            .list__link {
+                color: $clr-white;
+                line-height: 35px;
+            }
+        }
+
+        .copyright-section {
+            padding-top: 90px;
+            @include mq(lg) {
+                padding-top: 0px;
+            }
+        }
+
+        .form-select {
+            min-width: 200px;
+            background: transparent;
+            color: $clr-white;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 16px 12px;
+            &:focus {
+                box-shadow: none;
+                border-color: $clr-white;
+            }
+            option {
+                background: $clr-black;
+            }
+        }
+
+}

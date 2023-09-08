@@ -1,0 +1,143 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+p {
+    margin-bottom: 10px;
+}
+
+.font-22 {
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.min-h-inherit {
+    min-height: inherit;
+}
+.h-vh-100 {
+    min-height: 100vh;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.mb-50 {
+    margin-bottom: 50px;
+}
+.text__accent {
+    color: $clr-accent !important;
+}
+.text__light {
+    color: $clr-light !important;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.block-padding-90 {
+    padding-block:90px;
+    @include mq(lg) {
+        padding-block:40px;
+         }
+}
+
+.border-bottom {
+    @include mq(lg) {
+    border: 0 !important;
+     }
+}
+
+.block-padding{
+    padding-block: 160px 120px;
+    @include mq(lg) {
+        padding-block: 120px;
+     }
+}
+.block-padding-lg{
+    padding-block: 160px 160px;
+}
+.block-padding-xl{
+    padding-block: 200px;
+    @include mq(lg) {
+        padding-block: 100px;
+    }
+}
+
+.block-margin {
+    margin-block: 160px;
+    @include mq(lg) {
+        margin-block: 100px;
+    }
+}
+.block-margin-xl {
+    margin-block: 200px;
+    @include mq(lg) {
+        margin-block: 100px;
+    }
+
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+
+.link {
+    display: inline-block;
+    &:hover,
+    &:focus {
+        color: $clr-black;
+    }
+}
+
+.list {
+    padding-left: 1rem;
+    &-title {
+        margin-block: 30px;
+        color: $clr-light;
+        font-weight: 500;
+    }
+    &-nested {
+        list-style: none;
+        padding: 0;
+        margin-left: -1.5rem;
+    }
+}
+
+
+.border-dot {
+   
+    &-left {
+        border: 30px solid;
+        border-image: url(../images/contact_img_frame_one.png) 20 round;
+        border-left: 0;
+        @include mq(lg) {
+            border: 30px solid;
+            border-image: url(../images/contact_img_frame_two.png) 20 round;
+            border-right: 0;
+            border-left: 30;
+        }
+    }
+    &-right {
+        border: 30px solid;
+        border-image: url(../images/contact_img_frame_two.png) 20 round;
+        border-right: 0;
+        position: relative;
+        left: -20px;
+        @include mq(lg) {
+            left: 0px;
+        }
+    }
+}
+

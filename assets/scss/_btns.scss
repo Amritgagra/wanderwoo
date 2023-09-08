@@ -1,0 +1,108 @@
+.btn {
+    font-size: 17px;
+    line-height: 27px;
+    color: $clr-white !important;
+    padding: 8px 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    border-radius: 999px;
+    min-width:180px;
+    @include mq(sm) {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+.btn__accent {
+    background-image: linear-gradient(
+        235deg,
+        hsl(352deg 79% 58%) 0%,
+        hsl(352deg 79% 60%) 11%,
+        hsl(353deg 78% 62%) 22%,
+        hsl(353deg 78% 64%) 33%,
+        hsl(353deg 77% 66%) 44%,
+        hsl(353deg 76% 67%) 56%,
+        hsl(352deg 74% 69%) 67%,
+        hsl(352deg 72% 70%) 78%,
+        hsl(352deg 70% 71%) 89%,
+        hsl(352deg 67% 73%) 100%
+      );
+    border:0 !important;
+  
+    transition: background-image .3s ease;
+    &:hover,
+    &:focus {
+        color: $clr-white !important;
+        background-image: linear-gradient(
+  35deg,
+  hsl(352deg 79% 58%) 0%,
+  hsl(352deg 79% 60%) 11%,
+  hsl(353deg 78% 62%) 22%,
+  hsl(353deg 78% 64%) 33%,
+  hsl(353deg 77% 66%) 44%,
+  hsl(353deg 76% 67%) 56%,
+  hsl(352deg 74% 69%) 67%,
+  hsl(352deg 72% 70%) 78%,
+  hsl(352deg 70% 71%) 89%,
+  hsl(352deg 67% 73%) 100%
+);
+    }
+
+}
+
+.btn__primary {
+    background: $clr-primary;
+    color: #fff;
+    border: 1px solid $clr-primary;
+    align-items: flex-end;
+    white-space: nowrap;
+    @include mq(sm) {
+      align-items: center;
+   }
+    @include mq(375px) {
+      width: 100%;
+   }
+    &:hover,
+    &:focus
+     {
+      background: transparent !important;
+      color: $clr-primary !important;
+      border: 1px solid $clr-primary !important;
+    }
+}
+
+.btn__secondary {
+  background: $clr-secondary;
+    color: #fff;
+    border: 1px solid $clr-secondary;
+    align-items: flex-end;
+    white-space: nowrap;
+    @include mq(sm) {
+     align-items: center;
+  }
+  @include mq(375px) {
+    width: 100%;
+ }
+    &:hover,
+    &:focus
+     {
+      background: transparent !important;
+      color: $clr-secondary !important;
+      border: 1px solid $clr-secondary !important;
+    }
+}
+
+    @include mq(sm) {
+      .btn__accent {
+        width: 100%;
+      }
+    }  
+
+
+    .btns-wrapper {
+      @include mq(375px) {
+       flex-wrap: wrap;
+     }
+    }

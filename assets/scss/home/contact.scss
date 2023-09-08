@@ -1,0 +1,67 @@
+@import '../variables';
+@import '../mixins';
+.contact{
+     .nav {
+        border: 0 ;
+        &-tabs {
+            flex-wrap: nowrap;
+        }
+        &-link {
+            border: 0 ;
+            color: $clr-black;
+            border-radius: 0;
+            position: relative;
+            white-space: nowrap;
+            @include mq(sm){
+                padding: 5px;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                display: block;
+                width: 50px;
+                height: 2px;
+                background:$clr-nav-after;
+                margin: 0 auto;
+                border: 0;
+                opacity: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: opacity .3s ease-in-out;
+            }
+            &.active::before
+            {
+              opacity: 1;
+            }
+            &.active {
+                color: $clr-black;
+            }
+        }
+     }
+     &-img {
+        border-radius: 16px;
+     }
+}
+
+.tab-content>.tab-pane {
+    padding: 50px 0 0;
+
+}
+#History {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        width: 110px;
+        height: 120px;
+        background: url(../images/contact-img-3.png) no-repeat center/contain;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-59%);
+        @include mq(lg){
+            display: none;
+        }
+    }
+}

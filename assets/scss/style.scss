@@ -1,0 +1,17 @@
+@import './variables';
+@import './mixins';
+@import './typography';
+@import './btns';
+@import './global';
+
+
+
+.container-fluid {
+    padding: 0 80px;
+    @include mq(xxxl) {
+        padding: 0 5%;
+    }
+    @include mq(sm) {
+        padding: 0 12px;
+    }
+} 
