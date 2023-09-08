@@ -29,7 +29,7 @@
 }
 .footer__list .list__link {
   color: #fff;
-  line-height: 35px;
+  text-transform: capitalize;
 }
 .footer .copyright-section {
   padding-top: 90px;

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import './variables';
 @import './mixins';
 
@@ -24,7 +24,7 @@ body{
 h1{
     font-size: 35px;
     line-height: 50px;
-    font-weight: 400;
+    font-weight: 700;
     color: $clr-white;
     margin-bottom: 24px;
 }
@@ -40,6 +40,7 @@ h3{
     font-size: 25px;
     line-height: 30px;
     font-weight: 400;
+    text-transform: capitalize;
     @include mq(sm){
         font-size: 16px;
         line-height: 24px;

@@ -11,6 +11,7 @@
   border-radius: 0;
   position: relative;
   white-space: nowrap;
+  text-transform: capitalize;
 }
 @media screen and (max-width: 576px) {
   .contact .nav-link {
@@ -42,6 +43,9 @@
 }
 .contact-img {
   border-radius: 16px;
+}
+.contact p {
+  text-transform: capitalize;
 }
 
 .tab-content > .tab-pane {
